@@ -1,0 +1,83 @@
+.intro {
+  @include flex(center, center, row);
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: 95%;
+  margin: auto;
+}
+.intro-text {
+  flex: 1 1 40rem;
+  padding: 5rem;
+  h2 {
+    font-size: 8rem;
+    background: $gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  h3 {
+    font-size: 6rem;
+    padding-top: 2rem;
+  }
+  p {
+    padding-top: 3rem;
+  }
+}
+.intro-images {
+  flex: 1 1 40rem;
+}
+.splash {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  height: 100%;
+  z-index: -2;
+}
+.intro-social {
+  img {
+    margin: 1.5rem;
+  }
+}
+svg {
+  width: 100%;
+}
+#plant-right {
+  animation: plant 1.6s infinite alternate ease-in-out;
+}
+#plant-left {
+  animation: plant 1.6s 0.5s infinite alternate ease-in-out;
+}
+#me,
+#Vector_9 {
+  animation: me 1.8s ease infinite alternate;
+  transform-origin: bottom;
+}
+#clock-arrow {
+  animation: clock 1.5s infinite linear;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+@keyframes plant {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-20%);
+  }
+}
+@keyframes me {
+  from {
+    transform: rotateZ(3deg);
+  }
+  to {
+    transform: rotateZ(-3deg);
+  }
+}
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(365deg);
+  }
+}
