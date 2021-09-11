@@ -1,0 +1,19 @@
+.projects {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  @include flex(center, center, row);
+
+  h2 {
+    margin: 5rem 0rem;
+  }
+}
+.travelly {
+  flex: 1 1 40rem;
+  @include flex(center, center, column);
+}
+.elena {
+  flex: 1 1 40rem;
+  @include flex(center, center, column);
+}

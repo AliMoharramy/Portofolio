@@ -15,6 +15,9 @@ $gray-text: #2c2c2c;
 
 @import "global";
 @import "intro";
+@import "projects";
+@import "contact";
+@import "footer";
 
 header {
   min-height: 10vh;
@@ -24,6 +27,22 @@ header {
   ul {
     flex: 1 1 20rem;
     @include flex(space-around, center, row);
+  }
+}
+
+.header-fixer {
+  width: 85%;
+  margin: auto;
+
+  .logo {
+    flex: 1 1 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  ul {
+    flex: 1 1 40rem;
   }
 }
 
@@ -57,7 +76,23 @@ header {
     margin: auto;
     width: 100%;
   }
+  form {
+    width: 50%;
+  }
+  .header-fixer {
+    flex-wrap: wrap;
+    .logo {
+      flex: 1 1 60rem;
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    nav {
+      flex: 1 1 60rem;
+    }
+  }
 }
+
 @media screen and (max-width: 720px) {
   html {
     font-size: 45%;
@@ -69,15 +104,15 @@ header {
   }
   .logo {
     flex: 1 1 50rem;
+    margin-top: 2rem;
   }
   .splash {
     display: none;
   }
   header {
     width: 100%;
-    margin-top: 1rem;
     ul {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
   }
   svg {
@@ -87,4 +122,44 @@ header {
   .intro-text {
     text-align: center;
   }
+
+  .travelly {
+    flex: 1 1 50rem;
+    img {
+      width: 100%;
+    }
+  }
+  .elena {
+    flex: 1 1 50rem;
+    img {
+      width: 100%;
+    }
+  }
+  form {
+    width: 70%;
+  }
+  .header-fixer {
+    .logo {
+      text-align: center;
+    }
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #14e0cf #ffffff;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #14c1e0;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }
